@@ -1,5 +1,5 @@
 <div id="results"></div>
-
+<script>
 async function load() {
   let params = (new URL(document.location)).searchParams;
   let name = params.get('q');
@@ -8,3 +8,4 @@ async function load() {
   document.getElementById("results").innerHTML = response;
 }
 load();
+</script>
