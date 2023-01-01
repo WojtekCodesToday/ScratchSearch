@@ -1,0 +1,10 @@
+<div id="results"></div>
+
+async function load() {
+  let params = (new URL(document.location)).searchParams;
+  let name = params.get('q');
+  const request = await fetch('https://api.scratch.mit.edu/search/projects?q=griffpatch');
+  const response = await request.json();
+  document.getElementById("results").innerHTML = response;
+}
+load();
