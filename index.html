@@ -1,11 +1,10 @@
-Access-Control-Allow-Origin: https://wojtekcodestoday.github.io/ScratchSearch
-
+Results
 <div id="results"></div>
 <script>
 async function load() {
   let params = (new URL(document.location)).searchParams;
   let name = params.get('q');
-  const request = await fetch('https://api.scratch.mit.edu/search/projects?q=griffpatch');
+  const request = await fetch('https://scratchproxy.deta.dev/search/projects?q=griffpatch');
   const response = await request.json();
   document.getElementById("results").innerHTML = response;
 }
